@@ -35,7 +35,7 @@ blogs = [
 
 //creating a root route
 app.get("/", (req, res) => {
-  res.send("welcome to bhaukal");
+  res.render('index',{blogs});
 });
 //First task of displaying all the blogs
 app.get("/blogs", (req, res) => {
