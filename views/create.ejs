@@ -1,0 +1,11 @@
+<%- include('./partials/header.ejs') %>
+
+<form method="post" action="/blogs">
+  <label for="title">Enter Blog Title</label>
+  <input name="title" type="text" />
+  <label for="contnet">Please enter you content here</label>
+  <input name="content" type="text" />
+  <button type="submit">Submit</button>
+</form>
+
+<%- include('./partials/footer.ejs') %>

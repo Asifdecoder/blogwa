@@ -1,0 +1,20 @@
+<%- include('./partials/header.ejs') %>
+
+
+<form method="post" action="/blogs/<%=result.id%>?_method=PATCH ">
+
+    <label for="title">Title</label>
+    <input value='<%= result.title  %>' name="title" type="text">
+    <label for="content">Content</label>
+    <input value='<%=result.content%>' name="content" type="text">
+    <button type="submit" >Submit</button>
+
+
+
+</form>
+
+
+
+
+
+<%- include('./partials/footer.ejs') %>

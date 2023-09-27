@@ -1,0 +1,18 @@
+<%- include('./partials/header.ejs') %>
+<h1><a href="/blog/new">Add your own blog</a></h1>
+
+<% for(let i of blogs){ %>
+<h1><%= i.title %></h1>
+<p><%= i.content %></p>
+<p><%= i.id %></p>
+<button><a href="/blogs/<%=i.id %>">Read more</a></button>
+<button><a href="/blogs/<%=i.id%>/edit">Edit the blog</a></button>
+<form method="post" action="/blogs/<%=i.id%>?_method=DELETE">
+
+<button type="submit" >Delete</button>
+</form>
+
+<% } %>
+
+
+<%- include('./partials/footer.ejs') %>
