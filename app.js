@@ -78,6 +78,7 @@ app.patch("/blogs/:blogId", (req, res) => {
 
   res.redirect("/blogs");
 });
+//Deleting items
 app.delete("/blogs/:blogId", (req, res) => {
   let { blogId } = req.params;
   let newBlowgArray = blogs.filter((ne) => ne.id != blogId);
