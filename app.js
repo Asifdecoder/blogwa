@@ -67,7 +67,7 @@ app.get("/blogs/:blogId/edit", (req, res) => {
   let result = blogs.find((value) => value.id == blogId);
   res.render("edit", { result });
 });
-
+//using the patch request
 app.patch("/blogs/:blogId", (req, res) => {
   let { blogId } = req.params;
   let { title, content } = req.body;
